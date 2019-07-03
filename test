@@ -1,0 +1,49 @@
+package rockpaperscissors;
+import java.util.Scanner;
+
+public class RockPaperScissors
+{
+  public static void main(String[] args)
+  {
+    int yourHand = 0;
+    int cpuHand = 0;
+    String theWinner = "";
+    Scanner in = new Scanner(System.in);
+
+    System.out.println("\tMenu\n\n(1) Rock\n(2) Paper\n(3) Scissors" + "\n\nEnter Your Hand");
+    yourHand = in.nextInt();
+    cpuHand = ((int) (Math.random() * 100) % 3 + 1);
+
+    if(yourHand == 1)
+    {
+        if(cpuHand == 1)
+            theWinner = "TIE";
+        else if(cpuHand == 2)
+              theWinner = "COMPUTER";
+        else if(cpuHand == 3)
+              theWinner = "COMPUTER";
+        
+    }
+    else if(yourHand == 2)
+    {
+      if(cpuHand == 1)
+          theWinner = "YOU";
+      else if(cpuHand == 2)
+            theWinner = "TIE";
+      else if(cpuHand == 3)
+            theWinner = "COMPUTER"; 
+    }
+    else if (yourHand == 3)
+    {
+      if(cpuHand == 1)
+          theWinner = "YOU";
+      else if(cpuHand == 2)
+            theWinner = "YOU";
+      else if(cpuHand == 3)
+            theWinner = "TIE";
+    }
+    System.out.println("You played " + yourHand);
+    System.out.println("The Computer played " + cpuHand);
+    System.out.println("The winner is " + theWinner);
+  }
+}
